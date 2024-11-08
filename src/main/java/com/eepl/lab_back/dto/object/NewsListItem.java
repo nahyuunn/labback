@@ -2,7 +2,7 @@ package com.eepl.lab_back.dto.object;
 
 
 import com.eepl.lab_back.entity.BoardEntity;
-import com.eepl.lab_back.entity.UserEntity;
+// import com.eepl.lab_back.entity.UserEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

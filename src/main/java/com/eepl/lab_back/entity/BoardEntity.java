@@ -54,7 +54,7 @@ public class BoardEntity {
         this.boardCategory = dto.getBoardCategory();
         this.boardContent = dto.getBoardContent();
         this.boardWriteDatetime = boardWriteDatetime;
-        this.boardModifyDatetime = boardModifyDatetime;
+        // this.boardModifyDatetime = boardModifyDatetime;
         this.boardViewCount = 0;
         this.writerId = userId;
     }

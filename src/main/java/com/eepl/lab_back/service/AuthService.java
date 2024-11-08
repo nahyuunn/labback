@@ -8,7 +8,6 @@ import com.eepl.lab_back.dto.response.auth.SignInResponseDTO;
 import com.eepl.lab_back.dto.response.auth.SignUpResponseDTO;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestHeader;
 
 public interface AuthService {
 

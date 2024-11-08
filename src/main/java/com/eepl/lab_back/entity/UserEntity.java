@@ -1,18 +1,18 @@
 package com.eepl.lab_back.entity;
 
-import com.eepl.lab_back.dto.request.auth.ModifyRequestDTO;
+// import com.eepl.lab_back.dto.request.auth.ModifyRequestDTO;
 import com.eepl.lab_back.dto.request.auth.SignUpRequestDTO;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.Null;
+// import jakarta.validation.constraints.Email;
+// import jakarta.validation.constraints.Null;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.sql.Date;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+// import java.sql.Date;
+// import java.time.LocalDate;
+// import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "user")

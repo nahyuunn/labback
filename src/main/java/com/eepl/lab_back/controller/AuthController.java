@@ -8,13 +8,13 @@ import com.eepl.lab_back.dto.response.auth.ModifyResponseDTO;
 import com.eepl.lab_back.dto.response.auth.SignInResponseDTO;
 import com.eepl.lab_back.dto.response.auth.SignUpResponseDTO;
 import com.eepl.lab_back.service.AuthService;
-import jakarta.servlet.http.HttpServletRequest;
+// import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.stereotype.Controller;
+// import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 
