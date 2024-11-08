@@ -40,21 +40,3 @@ out/
 application.properties
 application-private.properties
 
-# Gradle build directory
-/build/
-
-# Gradle Wrapper files
-!gradle/wrapper/gradle-wrapper.jar
-
-# Gradle specific files
-.gradle/
-/out/
-
-# Eclipse specific files
-.classpath
-.project
-.settings/
-
-# IntelliJ IDEA specific files
-*.iml
-.idea/
