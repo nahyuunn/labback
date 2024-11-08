@@ -54,6 +54,8 @@ dependencies {
 		mainClass = 'com.eepl.lab_back.LabBackApplication' 
 	}
 
+	implementation 'io.github.cdimascio:dotenv-java:5.2.2'  // 최신 버전을 확인하고 사용하세요
+
 }
 
 tasks.named('test') {
