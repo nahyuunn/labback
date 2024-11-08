@@ -25,9 +25,19 @@ public class JWTFilter extends OncePerRequestFilter {
 
     private final JWTUtil jwtUtil;
 
-
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+
+        // /api/news/** 경로에 대해서는 JWT 인증을 건너뜀
+        // String requestURI = request.getRequestURI();
+        // if (requestURI.startsWith("/api/news/")) {
+        //     filterChain.doFilter(request, response);
+        //     return;
+        // }
+        if (request.getRequestURI().startsWith("/api/news")) {
+            filterChain.doFilter(request, response);  // JWT 검증 없이 통과
+            return;
+        }
 
         // 헤더에서 access키에 담긴 토큰을 꺼냄
         String accessToken = parseBearerToken(request);
@@ -42,12 +52,11 @@ public class JWTFilter extends OncePerRequestFilter {
         try {
             jwtUtil.isExpired(accessToken);
         } catch (ExpiredJwtException e) {
-
-            //response body
+            // response body
             PrintWriter writer = response.getWriter();
             writer.print("access token expired");
 
-            //response status code
+            // response status code
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             return;
         }
@@ -56,7 +65,6 @@ public class JWTFilter extends OncePerRequestFilter {
         String category = jwtUtil.getTokenCategory(accessToken);
 
         if (!category.equals("access")) {
-
             PrintWriter writer = response.getWriter();
             writer.print("invalid access token");
 
@@ -91,6 +99,4 @@ public class JWTFilter extends OncePerRequestFilter {
         String token = authorization.substring(7);
         return token;
     }
-
-
 }
