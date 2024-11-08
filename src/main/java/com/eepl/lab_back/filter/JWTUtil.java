@@ -16,8 +16,10 @@ import java.util.Date;
 public class JWTUtil {
 
     private SecretKey secretKey;
+    
 
-    public JWTUtil( String secret) {
+    public JWTUtil(String secret) {
+        secret = "dddddddddddddd2222222222222dddddddddddddddd";
         secretKey = new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8), Jwts.SIG.HS256.key().build().getAlgorithm());
     }
 
