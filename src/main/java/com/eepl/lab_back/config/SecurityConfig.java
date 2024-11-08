@@ -56,7 +56,7 @@ public class SecurityConfig {
         //경로별 인가 작업
         http
                 .authorizeHttpRequests((auth) -> auth
-                
+                        
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/file/**").permitAll()
                         .requestMatchers("/reissue").permitAll()
