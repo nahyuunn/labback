@@ -56,13 +56,13 @@ public class SecurityConfig {
         //경로별 인가 작업
         http
                 .authorizeHttpRequests((auth) -> auth
-                        
-                        .requestMatchers("/api/auth/**").permitAll()
-                        .requestMatchers("/file/**").permitAll()
-                        .requestMatchers("/reissue").permitAll()
-                        .requestMatchers("/api/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/api/news/**").permitAll()
-                        // .requestMatchers(HttpMethod.POST, "/api/news/**").hasAnyRole("ADMIN","USER")
+                        .requestMatchers("/**").permitAll()
+                        // .requestMatchers("/api/auth/**").permitAll()
+                        // .requestMatchers("/file/**").permitAll()
+                        // .requestMatchers("/reissue").permitAll()
+                        // .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                        // .requestMatchers("/api/news/**").permitAll()
+                        // // .requestMatchers(HttpMethod.POST, "/api/news/**").hasAnyRole("ADMIN","USER")
                         .anyRequest().authenticated());
 
 
