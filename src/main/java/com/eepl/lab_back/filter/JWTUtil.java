@@ -2,7 +2,7 @@ package com.eepl.lab_back.filter;
 
 import io.jsonwebtoken.Jwts;
 // import jakarta.servlet.http.Cookie;
-import org.springframework.beans.factory.annotation.Value;
+// import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
@@ -17,7 +17,7 @@ public class JWTUtil {
 
     private SecretKey secretKey;
 
-    public JWTUtil(@Value("${spring.jwt.secret}") String secret) {
+    public JWTUtil( String secret) {
         secretKey = new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8), Jwts.SIG.HS256.key().build().getAlgorithm());
     }
 
